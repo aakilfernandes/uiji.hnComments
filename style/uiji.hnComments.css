@@ -1,0 +1,30 @@
+/*.hnComments{background-color:white;color:#333;}*/
+.hnComments .items{
+	margin: 8px 0px;
+	border-color: #666;
+	border-style: dotted;
+	border-width: 0px 0px 0px 4px;
+	padding:0px 8px;
+}
+.hnComments .items.itemsLevel0{margin:0px}
+.hnComments .item{margin-top:8px; line-height:16px;}
+.hnComments .item.eq0{margin-top:0px; line-height:16px;}
+.hnComments .item .meta {color:#666; display: inline-block; margin-right: 16px;}
+.hnComments .item a.meta{font-weight:bold;}
+
+.hnComments .navBar{margin-bottom: 8px;}
+.hnComments .navBar > div,.hnComments .navBar > a{display:inline-block; margin-right:8px; font-size:14px;}
+.hnComments .hnLogo{background-color: orange; display: inline-block;}
+.hnComments .hnLogo{
+	line-height: 17px;
+	border: 2px;
+	text-align: center;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border-style: solid;
+	color: white;
+	margin: 2px;
+}
+
+.hnComments .credits{margin-top:8px; color:#666}
