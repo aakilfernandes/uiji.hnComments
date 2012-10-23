@@ -49,15 +49,22 @@ header=function(){
 return uiji('#header.emphasis',function(){$(this)
     .uiji(logo())
     .uiji('#title',function(){$(this)
-        .uiji('a{href=/}"'+window.title+'"')})
+        .uiji({tag:'a',href:'/',html:page.title})
+    })
     .uiji('.divider')
-    .uiji('.tagline"'+window.title+'"')})
+    .uiji({'class':'tagline',html:page.tagline})
+})
+}
+
+content=function(){
+return uiji('#content',page.contentCallback)
 }
 
 sectionHeader=function(nameLead,name){
 return uiji('.header.emphasis',function(){$(this)
         .uiji({'class':'nameLead',html:nameLead})
-        .uiji({'class':'name',html:name})})
+        .uiji({'class':'name',html:name})
+})
 }
 
 snippet=function(code,language){
@@ -101,7 +108,7 @@ return uiji({id:id,'class':'holder'},function(){$(this)
 }
 
 githubRibbon=function(){
-    return uiji('a.githubRibbon{href=https://github.com/aakilfernandes/uiji',function(){$(this)
+    return uiji({tag:'a','class':'githubRibbon',href:'https://github.com/aakilfernandes/'+page.githubRepo},function(){$(this)
         .uiji({
             tag:'img',
             src:'https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png',
@@ -109,6 +116,7 @@ githubRibbon=function(){
         })
     })
 }
+
 
 demos = {
 helloWorld:function(){$('#helloWorld .output').uiji('p.greeting"Hello World!"')},
