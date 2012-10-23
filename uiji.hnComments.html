@@ -22,16 +22,22 @@
 		<script type="text/javascript">
 			page={
 				title:'uiji.hnComments',
-				tagline:'Import Comments From HackerNews With uiji',
+				tagline:'Import Comments From HackerNews With jQuery and uiji.js',
 				githubRepo:'uiji.hnComments',
 				contentCallback:function(){$(this)
+					.uiji('p"This is a demo of uiji.hnComments. It requires both jQuery and "',function(){$(this)
+						.uiji('a{href=uiji.html}"uiji.js"')
+						.uiji('span" (reverse jQuery)."')
+					})
 					.uiji('p"Include these two scripts:"')
 					.uiji(snippet(
 						'<script type="text/javascript" src="http://aakilfernandes.com/scripts/uiji.js"><\/script>'
 						+'\n<script type="text/javascript" src="http://aakilfernandes.com/scripts/uiji.hnComments.js"><\/script>'
 						,'html')
 					)
-					.uiji('p"And call this:"')
+					.uiji('p"And (optionally) this CSS file:"')
+					.uiji(snippet('<link rel="stylesheet" href="http://aakilfernandes.com/style/uiji.hnComments.css"/>','html'))
+					.uiji('p"Then call this:"')
 					.uiji(snippet('$("#content").uiji(hnComments(/*storyId:*/))','javascript'))
 					.uiji('p"And you get:"')
 					.uiji(hnComments(4678482))
