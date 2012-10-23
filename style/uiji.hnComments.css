@@ -13,6 +13,7 @@
 .hnComments .item a.meta{font-weight:bold;}
 
 .hnComments .navBar{margin-bottom: 8px;}
+.hnComments .navBar .emphasis{color:white;}
 .hnComments .navBar > div,.hnComments .navBar > a{display:inline-block; margin-right:8px; font-size:14px;}
 .hnComments .hnLogo{background-color: orange; display: inline-block;}
 .hnComments .hnLogo{
